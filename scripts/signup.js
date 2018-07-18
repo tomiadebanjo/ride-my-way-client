@@ -113,7 +113,7 @@ submitButton.addEventListener('click', (e) => {
             errorMessage.setAttribute('style', 'display: block');
             errorMessage.innerHTML = `<i class="far fa-times-circle"></i> ${data.message} `;
           }
-        }, 1500);
+        }, 1000);
       })
       .catch(err => console.log(err));
   }

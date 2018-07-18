@@ -5,15 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
-	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+	 crossorigin="anonymous">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 	<title>Ride My Way | Home</title>
 </head>
 
 <body>
 	<header class="header">
-		<a href="index.html" class="brand">Ride My Way</a>
+		<a href="../index.html" class="brand">Ride My Way</a>
 		<input class="menu-btn" type="checkbox" id="menu-btn" />
 		<label class="menu-icon" for="menu-btn">
 			<span class="navicon"></span>
@@ -41,16 +43,23 @@
 							<div class="form_label">
 								<label for="email">Email:</label>
 							</div>
-							<input type="email" class="text-email" name="email" required>
+							<input id="lg-email" type="email" class="text-email" name="email" required>
+							<div id="lg-email-error" class="error"></div>
 						</div>
 						<div class="form-group">
 							<div class="form_label">
 								<label for="password">Password:</label>
 							</div>
-							<input type="password" class="text-input" name="password" required>
+							<input id="lg-password" type="password" class="text-input" name="password" required>
+							<div id="lg-password-error" class="error"></div>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn">LOG IN</button>
+							<div class="error-msg" id="lg-api-error"></div>
+							<div class="success-msg" id="lg-api-success"></div>
+						</div>
+						<div class="loader" id="lg-spinner"></div>
+						<div class="form-group">
+							<button id="lg-submit-button" type="submit" class="btn">LOG IN</button>
 						</div>
 					</form>
 				</div>
@@ -62,6 +71,7 @@
 	<footer class="fixed-footer">
 		<p>Ride My Way | Copyright &copy; 2018</p>
 	</footer>
+	<script src="../scripts/login.js"></script>
 </body>
 
 </html>

@@ -258,7 +258,7 @@ footer {
 .error {
   color: red;
 }
-#api-error {
+.error-msg {
   background-color: #FFBABA;
   color: #d8000c;
   margin: 10px 0px;
@@ -266,7 +266,7 @@ footer {
   border-radius: 5px;
   display: none;
 }
-#api-success {
+.success-msg {
   background-color: #DFF2BF;
   color: #4f8a10;
   margin: 10px 0px;
