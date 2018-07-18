@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+	 crossorigin="anonymous">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+	<title>Ride My Way | Home</title>
+</head>
+
+<body>
+	<header class="header">
+		<a href="index.html" class="brand">Ride My Way</a>
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn">
+			<span class="navicon"></span>
+		</label>
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="profile.html">Profile</a>
+				</li>
+				<li>
+					<a href="login.html">Log In</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="site_main">
+		<div class="container">
+			<div class="form_container sign_up_container">
+				<div class="form-header">
+					<h1>Create your account</h1>
+				</div>
+
+				<div class="form">
+					<form class="form">
+						<div class="form-group">
+							<div class="form_label">
+								<label for="firstName">First Name:</label>
+							</div>
+							<input id="first-name" type="text" name="firstName" class="text-input" required>
+							<div id="first-name-error" class="error"></div>
+						</div>
+						<div class="form-group">
+							<div class="form_label">
+								<label for="lastName">Last Name:</label>
+							</div>
+							<input id="last-name" type="text" name="lastName" class="text-input" required>
+							<div id="last-name-error" class="error"></div>
+						</div>
+						<div class="form-group">
+							<div class="form_label">
+								<label for="email">Email:</label>
+							</div>
+							<input id="email" type="email" class="text-email" name="email" required>
+							<div id="email-error" class="error"></div>
+						</div>
+						<div class="form-group">
+							<div class="form_label">
+								<label for="password">Password:</label>
+							</div>
+							<input id="password" type="password" class="text-input" name="password" required>
+							<div id="password-error" class="error"></div>
+						</div>
+						<div class="form-group">
+							<div id="api-error"></div>
+							<div id="api-success"></div>
+						</div>
+						<div>
+							<div class="loader" id="spinner"></div>
+						</div>
+						<div class="form-group">					
+							<button id="submit-button" type="submit" class="btn">SIGN UP</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>Ride My Way | Copyright &copy; 2018</p>
+	</footer>
+	<script src="./scripts/signup.js"></script>
+</body>
+
+</html>
