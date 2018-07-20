@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/view.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
 	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+	crossorigin="anonymous">
 	<script src="../scripts/auth.js"></script>
 	<title>Ride My Way | Dashboard</title>
 </head>
@@ -22,6 +23,9 @@
 		</label>
 		<nav>
 			<ul class="menu">
+				<li>
+					<a href="viewrides.html">Car Pool</a>
+				</li>
 				<li>
 					<a href="profile.html">Profile</a>
 				</li>
@@ -47,30 +51,32 @@
 					<table class="table" id="ride-table">
 						<div class="big-loader" id="ride-spinner"></div>
 
-							<!--Details of a specifc ride Modal -->						
+						<!--Details of a specifc ride Modal -->
+				</div>
+				</table>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<span class="close" id="ride-close">&times;</span>
+						<div class="form-header">
+							<h2>Ride Details</h1>
 						</div>
-					</table>
-					<div id="myModal" class="modal">
-						<div class="modal-content">
-							<span class="close" id="ride-close">&times;</span>
-							<div class="form-header">
-								<h2>Ride Details</h1>
-							</div>
-							<div class="modal-loader" id="modal-spinner"></div>
-								<div class="table-container" id="single-table">
-									<!-- Single ride info -->
-								</div>
+						<div class="modal-loader" id="modal-spinner"></div>
+						<div class="error-msg" id="ride-api-error"></div>
+						<div class="success-msg" id="ride-api-success"></div>
+						<div class="table-container" id="single-table">
+							<!-- Single ride info -->
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</main>
 
 	<footer>
 		<p>Ride My Way | Copyright &copy; 2018</p>
 	</footer>
-	
+
 	<script src="../scripts/get-all-rides.js"></script>
 	<script src="../scripts/signout.js"></script>
 </body>
