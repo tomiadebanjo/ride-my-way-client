@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/view.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+	<script src="../scripts/auth.js"></script>
+	<title>Ride My Way | Dashboard</title>
+</head>
+
+<body>
+	<header class="header">
+		<a href="../index.html" class="brand">Ride My Way</a>
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn">
+			<span class="navicon"></span>
+		</label>
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="profile.html">Profile</a>
+				</li>
+				<li>
+					<a id="sign-out">Sign Out</a>
+				</li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+	<main class="site_main">
+		<div class="container">
+			<div class="form-header">
+				<h1>Your Dashboard</h1>
+			</div>
+
+			<div class="passenger-dashboard-container">
+				<div class="form-header">
+					<h2>Avaliable Rides</h2>
+				</div>
+				<div id="ride-error" class="error-msg"></div>
+				<div class="table-container">
+					<table class="table" id="ride-table">
+						<div class="big-loader" id="ride-spinner"></div>
+
+							<!--Details of a specifc ride Modal -->						
+						</div>
+					</table>
+					<div id="myModal" class="modal">
+						<div class="modal-content">
+							<span class="close" id="ride-close">&times;</span>
+							<div class="form-header">
+								<h2>Ride Details</h1>
+							</div>
+							<div class="modal-loader" id="modal-spinner"></div>
+								<div class="table-container" id="single-table">
+									<!-- Single ride info -->
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>Ride My Way | Copyright &copy; 2018</p>
+	</footer>
+	
+	<script src="../scripts/get-all-rides.js"></script>
+	<script src="../scripts/signout.js"></script>
+</body>
+
+</html>
