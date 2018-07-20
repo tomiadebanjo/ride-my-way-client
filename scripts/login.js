@@ -70,10 +70,14 @@ lgSubmitButton.addEventListener('click', (e) => {
           lgSpinner.setAttribute('style', 'display: none');
           if (data.success) {
             sessionStorage.token = data.token;
+            sessionStorage.userId = data.userId;
+            sessionStorage.fullName = data.fullName;
             lgSuccessMessage.setAttribute('style', 'display: block');
-            lgSuccessMessage.innerHTML = `<i class="fa fa-check"></i> ${data.message} redirecting in 2 seconds`;
+            lgSuccessMessage.innerHTML = `<i class="fa fa-check"></i> ${
+              data.message
+            } redirecting in 2 seconds`;
             setTimeout(() => {
-              window.location = 'viewrides.html';
+              window.location = 'passenger-view.html';
             }, 2000);
           } else {
             lgErrorMessage.setAttribute('style', 'display: block');

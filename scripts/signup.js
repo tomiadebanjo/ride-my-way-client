@@ -104,10 +104,13 @@ submitButton.addEventListener('click', (e) => {
           spinner.setAttribute('style', 'display: none');
           if (data.message === 'User registration successful') {
             sessionStorage.token = data.token;
+            sessionStorage.userId = data.userId;
+            sessionStorage.fullName = data.fullName;
+            console.log(data);
             successMessage.setAttribute('style', 'display: block');
             successMessage.innerHTML = `<i class="fa fa-check"></i> ${data.message} redirecting in 2 seconds`;
             setTimeout(() => {
-              window.location = 'viewrides.html';
+              window.location = 'passenger-view.html';
             }, 2000);
           } else {
             errorMessage.setAttribute('style', 'display: block');
