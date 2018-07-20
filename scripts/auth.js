@@ -1,9 +1,10 @@
+// checks if user has a token to access restricted pages
 if (!sessionStorage.token) {
   alert('Please login to access this page');
   window.location.href = '../index.html';
 }
-const url = 'https://ride-my-way-zaz.herokuapp.com/api/v1/rides';
-fetch(url, {
+const urlValidate = 'https://ride-my-way-zaz.herokuapp.com/api/v1/rides';
+fetch(urlValidate, {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',

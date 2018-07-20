@@ -289,6 +289,21 @@ footer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+.big-loader {
+  display: none;
+  margin: 30px auto;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 .form-header {
   font-size: 20px;
   text-align: center;
@@ -401,13 +416,15 @@ td {
   padding: 16px;
 }
 tr:nth-child(even) {
-  background-color: #53a6ae;
+  background-color: #b8dde0;
 }
 
 .table-container {
   overflow-x: auto;
 }
-
+#sign-out {
+  cursor: pointer;
+}
 /* Passenger view */
 .passenger-dashboard-container {
   margin: 20px auto;
