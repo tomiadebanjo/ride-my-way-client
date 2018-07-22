@@ -15,6 +15,7 @@ fetch(urlValidate, {
   .then((data) => {
     if (data.auth === false) {
       window.location.href = '../index.html';
+      sessionStorage.isAuthenticated = JSON.stringify(false);
       alert('Session expired! Login again!');
     }
   })
