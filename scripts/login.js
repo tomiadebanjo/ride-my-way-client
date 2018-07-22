@@ -72,6 +72,7 @@ lgSubmitButton.addEventListener('click', (e) => {
             sessionStorage.token = data.token;
             sessionStorage.userId = data.userId;
             sessionStorage.fullName = data.fullName;
+            sessionStorage.isAuthenticated = JSON.stringify(true);
             lgSuccessMessage.setAttribute('style', 'display: block');
             lgSuccessMessage.innerHTML = `<i class="fa fa-check"></i> ${
               data.message

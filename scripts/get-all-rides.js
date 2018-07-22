@@ -44,7 +44,6 @@ fetch('https://ride-my-way-zaz.herokuapp.com/api/v1/rides', {
                         <th>Details</th>
                     </tr >`;
           data.rides.forEach((ride) => {
-            console.log(ride);
             const newDate = trimDate(ride.departure_date);
             const newTime = trimTime(ride.departure_time);
             rideInfo += ` <tr class="row">
@@ -97,7 +96,6 @@ const rideDetails = (rideId) => {
         if (data.success) {
           const trimmedDate = trimDate(data.rideDetails.departure_date);
           const trimmedTime = trimTime(data.rideDetails.departure_time);
-          console.log(data);
           singleRideInfo = `
             <table class="table">
               <tr class="row">
@@ -146,7 +144,6 @@ const joinRide = (rideId) => {
     .then((data) => {
       setTimeout(() => {
         rideSpinner.setAttribute('style', 'display: none');
-        console.log(data);
         if (data.success) {
           sucMessage.setAttribute('style', 'display: block');
           sucMessage.innerHTML = `<i class="fa fa-check"></i> ${data.message}`;
@@ -155,6 +152,5 @@ const joinRide = (rideId) => {
           errMessage.innerHTML = `<i class="far fa-times-circle"></i> ${data.message}`;
         }
       }, 1000);
-      console.log(data);
     });
 };
