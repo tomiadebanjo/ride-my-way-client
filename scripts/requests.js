@@ -35,7 +35,6 @@ fetch('https://ride-my-way-zaz.herokuapp.com/api/v1/rides', {
       reqSpinner.setAttribute('style', 'display: none');
       if (data.success) {
         const requestData = data.rides.filter(ride => ride.userid === usersId);
-        console.log(requestData);
         if (data.rides.length < 1) {
           reqError.setAttribute('style', 'display: block');
           reqError.innerHTML = '<i class="far fa-times-circle"></i> No available ride at this moment, check back later';
@@ -97,11 +96,9 @@ const getRideRequests = (rideId) => {
   })
     .then(res => res.json())
     .then((data) => {
-      console.log(data);
       setTimeout(() => {
         reqModalSpinner.setAttribute('style', 'display: none');
         if (data.success) {
-          console.log(data);
           singleRideInfo = `
               <tr class="row">
                 <th>Rider name</th>
@@ -109,7 +106,6 @@ const getRideRequests = (rideId) => {
                 <th>Response</th>
               </tr>`;
           data.requests.forEach((request) => {
-            console.log(request);
             const requestId = request.requestid;
             const rideId = request.rideid;
             singleRideInfo += `
@@ -144,11 +140,10 @@ const requestResponse = (rideId, requestId, response) => {
   })
     .then(res => res.json())
     .then((data) => {
-      console.log(data);
       if (data.success) {
-        setTimeout(()=> {
-            getRideRequests(rideId);
-        }, 1000)
+        setTimeout(() => {
+          getRideRequests(rideId);
+        }, 1000);
       }
     });
 };

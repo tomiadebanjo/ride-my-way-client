@@ -106,7 +106,6 @@ submitButton.addEventListener('click', (e) => {
             sessionStorage.token = data.token;
             sessionStorage.userId = data.userId;
             sessionStorage.fullName = data.fullName;
-            console.log(data);
             successMessage.setAttribute('style', 'display: block');
             successMessage.innerHTML = `<i class="fa fa-check"></i> ${data.message} redirecting in 2 seconds`;
             setTimeout(() => {

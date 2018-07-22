@@ -13,6 +13,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.signed-in1, #signed-out1, #signed-out, #signed-in {
+  display: none;
+}
 
 /* global */
 .site_main {
@@ -351,7 +354,7 @@ footer {
   padding: 10px;
 }
 #user-profile {
-  min-height: 600px;
+  min-height: 500px;
   padding: 20px;
   margin-top: 80px;
 }
